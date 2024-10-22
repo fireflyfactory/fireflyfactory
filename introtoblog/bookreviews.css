@@ -1,0 +1,41 @@
+/* Flex container styling */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center the items */
+    gap: 20px; /* Space between items */
+    margin-bottom: 20px; /* Space below the container */
+}
+
+/* Text box styling */
+.text-box {
+    width: auto; /* Allow the width to be defined by the image */
+    height: auto; /* Allow the height to be defined by the image */
+    padding: 0; /* Remove padding to avoid extra space */
+    background-color: transparent; /* No background color */
+    border: none; /* No border */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center align content */
+    text-align: center; /* Center text */
+}
+
+/* Image styling */
+.text-box img {
+
+    max-width: 400px; /* Optional: limit maximum width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Maintain image ratio while filling container */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+.text-box:hover {
+        
+    color: #ffdfba;
+}
+
+h4 {
+
+    font-size: 80px;
+    text-align: center;
+}

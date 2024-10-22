@@ -1,0 +1,21 @@
+blockquote{
+
+    position: absolute;
+    top: 500px;
+    left: 200px;
+    text-align: justify;  
+}
+.scrollable-pre {
+    text-align: center;
+    font-family:'Courier New', Courier;
+    font-weight: 150;
+    position: absolute;
+    top: 600px;
+    left: 350px;
+}
+
+footer {
+
+    position: absolute;
+    top: 4500px;
+}
