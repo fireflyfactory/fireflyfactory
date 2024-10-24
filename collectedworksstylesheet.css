@@ -1,0 +1,69 @@
+.intro {
+
+    font-size: larger;
+    text-align: center;
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #000000;
+    text-align: left;  
+}
+
+.blog-page a {
+    text-decoration: none; 
+    color: #daa36fb3; 
+    font-size: 18px; 
+    font-weight: bold; 
+    display: inline-block; 
+    margin-bottom: 10px; 
+    transition: color 0.3s ease; 
+}
+
+
+
+.text-box {
+
+    border: 5px solid #bb461b; /* Adds a border around the text box */
+    padding: 25px; /* Space inside the box */
+    margin: 20px; /* Space outside the box */
+    border-radius: 25px; /* Rounds the corners */
+    background-color: #cf9fc1ac; /* Background color of the box */
+    text-align: center; /* Centers the text inside the box */
+    text-decoration: none;
+    height: 50; 
+    width: 50;
+}
+
+body img {
+
+    max-width: 300px;
+
+}
+
+.journal {
+
+    position: absolute;
+    left: 100px;
+}
+
+.poetry {
+
+    position: absolute;
+    right: 100px;
+    top: 400px;
+}
+
+.bookreviews {
+
+ text-decoration: none;
+
+}
+
+.intentionalworks {
+
+ text-decoration: none;
+}

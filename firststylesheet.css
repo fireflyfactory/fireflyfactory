@@ -1,0 +1,242 @@
+title {
+
+    text-align: center;
+}
+ 
+
+header {
+
+    border-bottom: 10px solid #bb461b; /* Keeps the bottom border */
+    border-top: 10px solid #bb461b; /* Adds a top border */
+    border-left: 10px solid #bb461b; /* Adds a left border */
+    border-right: 10px solid #bb461b; /* Adds a right border */
+    border-radius: 25px;
+    
+} 
+/* border line thing ^^*/
+
+header::before {
+    content: "";
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url('persian-rug-wallpaper.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 300px;
+    color: white; 
+    text-align: center;
+    padding-top: 95px;
+    filter: blur(7px);
+    z-index: -1;
+}
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    font-family: ' New', Courier, monospace;
+    position: absolute;
+    top: 300px;
+    left: 365px;
+}
+header nav ul li a{
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: large;
+    color:#daa36fb3;
+    font-weight: lighter;
+}
+
+nav ul li a {
+    color: #daa36fb3;               
+    text-decoration: none;          
+    font-size: large;               
+    font-weight: lighter;           
+    padding: 10px 20px;             
+    background-color: #4d20207a;    
+    border-radius: 5px;             
+    transition: background-color 0.3s ease; 
+}
+
+nav ul li a:hover {
+    color: #e37e03;               
+    background-color: #ffdfba;  }
+    /* nav ul format ^^^ */  
+
+body {
+    background-color: #aa6e6e;
+}
+
+header h1 {
+    color: #000000;
+    -webkit-text-stroke: 10px rgba(237, 104, 32, 0.392);
+    font-size: 150px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+}
+/* ^^^ big heading that the top FIREFLY FACTORY format */
+
+
+.flex-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.text-box {
+
+    border: 5px solid #bb461b; /* Adds a border around the text box */
+    padding: 25px; /* Space inside the box */
+    margin: 20px; /* Space outside the box */
+    border-radius: 25px; /* Rounds the corners */
+    background-color: #ec904eca; /* Background color of the box */
+    text-align: center; /* Centers the text inside the box */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    
+}
+
+.text-box:hover {
+        
+    color: #e37e03;                  
+    background-color: #ffdfba;      
+}
+
+.text-box a {
+
+text-decoration: none;
+font-size: x-large;
+
+}
+
+.about {
+
+    position: absolute; 
+    top: 600px; /* 50px from the top of the parent element */
+    left: 75px; /* 50px from the left of the parent element */
+    width: 550px;
+    height: 600px;
+    font-size: 20px;
+    z-index: 10;
+    
+}
+
+.collectedworks {
+
+    position: absolute; 
+    top: 600px; /* 50px from the top of the parent element */
+    right: 75px; /* 50px from the left of the parent element */
+    width: 550px;
+    height: 600px;
+    font-size: 20px;
+    z-index: 10;
+}
+
+.text-box img {
+    width: 100%; /* Make the image fill the width of the text box */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 50px; /* Optional: Rounds the corners of the image */
+    margin-top: 20px;
+    margin-bottom: 15px; /* Adds space between image and text */
+}
+
+.contact {
+
+    position:absolute;
+    top: 1300px; /* 50px from the top of the parent element */
+    left: 50px;
+    width: 1250px;
+    height: auto;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* end text-box formatting^^^ */
+
+p a {
+    
+    color: #daa36fb3;                
+        text-decoration: none;           
+        font-size: xx-large;                
+        font-weight: bolder;            
+        padding: 20px 30px;              
+        background-color: #4d20207a;    
+        border-radius: 20px;              
+        transition: background-color 0.3s ease; 
+        display:block;
+    }
+
+
+        
+p a:hover {
+        color: #e37e03;                  
+        background-color: #ffdfba;       
+       }
+    
+    nav ul li a.active {
+        background-color: #e37e03;       
+        color: #ffffff;        
+}
+ 
+/*paragraph link format ^^^*/
+
+h1 {
+    color: #000000;
+    text-align: center;
+    font-size: 50px;
+}
+
+/* ^^^^ welcome format */
+
+h2 {  
+    
+    color: #000000;
+    text-align: center;
+    font-size:x-large;
+    position: absolute;
+    top: 25px;
+    left: 650px;
+    background-color: #e37e0363;
+}
+/* ^^^^ second heading: HOMEPAGE */
+
+p {
+   
+    font-size: 18px;
+    line-height: 1.6;
+    color: black;
+    text-align: center;
+
+     /* ^^^^prgph format */
+
+}
+
+blockquote {
+
+position: absolute;
+left: 30px;
+top: 550px;
+text-align: center;
+margin: 0 auto;
+font-size: 19px;
+font-weight: 1;
+background-color: #ffd6aa21;
+
+
+}
+
+footer {
+
+    position: absolute;
+    top: 1500px;
+    left: 100px;
+    background-color: #ff5900;
+    padding: 10px;
+    text-align: left;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: smaller;
+}
