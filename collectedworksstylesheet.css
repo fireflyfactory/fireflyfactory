@@ -1,69 +1,52 @@
-.intro {
-
-    font-size: larger;
-    text-align: center;
-    font-weight: bold;
+/* Main container for row layout */
+.row-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto a new line */
+    justify-content: space-around; /* Evenly spaces items in the row */
+    gap: 20px; /* Space between items */
+    padding: 20px;
 }
 
-p {
-    font-size: 18px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: #000000;
-    text-align: left;  
-}
-
-.blog-page a {
-    text-decoration: none; 
-    color: #daa36fb3; 
-    font-size: 18px; 
-    font-weight: bold; 
-    display: inline-block; 
-    margin-bottom: 10px; 
-    transition: color 0.3s ease; 
-}
-
-
-
+/* Styling for each text box */
 .text-box {
-
-    border: 5px solid #bb461b; /* Adds a border around the text box */
-    padding: 25px; /* Space inside the box */
-    margin: 20px; /* Space outside the box */
-    border-radius: 25px; /* Rounds the corners */
-    background-color: #cf9fc1ac; /* Background color of the box */
-    text-align: center; /* Centers the text inside the box */
-    text-decoration: none;
-    height: 50; 
-    width: 50;
+    border: 5px solid #bb461b;
+    padding: 15px;
+    border-radius: 25px;
+    background-color: #cf9fc1ac;
+    text-align: center;
+    max-width: 300px; /* Limits the width for each text box */
+    flex: 1 1 300px; /* Allows boxes to flexibly adjust their width */
+    box-sizing: border-box;
 }
 
-body img {
-
-    max-width: 300px;
-
+/* Image scaling within the text box */
+.text-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
-.journal {
-
-    position: absolute;
-    left: 100px;
+footer {
+    position: relative;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ff5900;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: .75rem;
 }
 
-.poetry {
+footer p {
 
-    position: absolute;
-    right: 100px;
-    top: 400px;
-}
-
-.bookreviews {
-
- text-decoration: none;
+    font-weight: lighter;
+    font-size: .75rem; 
 
 }
-
-.intentionalworks {
-
- text-decoration: none;
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .row-container {
+        flex-direction: column; /* Stack in a single column */
+        align-items: center; /* Center items in column layout */
+    }
 }
