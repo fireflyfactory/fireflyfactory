@@ -60,6 +60,7 @@ header h1 {
     text-align: center;
     font-weight: light;
     z-index: 1;
+    justify-content: center;
 }
 /* Navigation styles */
 
@@ -123,7 +124,7 @@ header nav ul li a:hover {
     width: 100%;
     height: auto;
     max-width: 100%;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 /* Responsive content layout */
@@ -141,6 +142,7 @@ header nav ul li a:hover {
     max-width: 550px;
     margin: 20px 0;
     position: relative;
+    text-decoration: none;
 }
 
 /* Contact box */
@@ -163,6 +165,7 @@ p a {
     border-radius: 20px;
     transition: background-color 0.3s ease;
     display: block;
+    text-decoration: none;
 }
 
 p a:hover {
@@ -182,6 +185,7 @@ p {
     line-height: 1.6;
     color: black;
     text-align: center;
+    text-decoration: none;
 }
 
 blockquote {
@@ -202,15 +206,24 @@ footer {
     background-color: #ff5900;
     text-align: left;
     font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: .75rem;
 }
 
 footer p {
 
-    font-weight: lighter;
+    font-weight: bold;
     font-size: .75rem; 
 
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+
+    text-align: center;
 }
 
 /* Media Queries for Responsiveness */
