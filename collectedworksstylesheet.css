@@ -39,7 +39,7 @@ footer {
 
 footer p {
 
-    font-weight: lighter;
+    font-weight: bold;
     font-size: .75rem; 
 
 }
@@ -50,4 +50,3 @@ footer p {
         align-items: center; /* Center items in column layout */
     }
 }
- 
