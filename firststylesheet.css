@@ -61,7 +61,9 @@ header h1 {
     font-weight: light;
     z-index: 1;
     justify-content: center;
+    text-align: center;
 }
+
 /* Navigation styles */
 
 header nav ul {
