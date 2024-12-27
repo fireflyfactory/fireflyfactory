@@ -1,21 +1,94 @@
-blockquote{
-
-    position: absolute;
-    top: 500px;
-    left: 200px;
-    text-align: justify;  
-}
-.scrollable-pre {
+/* General Reset */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     text-align: center;
-    font-family:'Courier New', Courier;
-    font-weight: 150;
-    position: absolute;
-    top: 600px;
-    left: 350px;
 }
 
-footer {
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #aa6e6e;
+}
 
-    position: absolute;
-    top: 4500px;
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+blockquote {
+    margin: 2rem auto; /* Center horizontally */
+    max-width: 800px; /* Optional: Set a maximum width */
+    font-style: italic;
+    text-align: center; /* Center-align text */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p {
+    text-align: center; /* Center-align paragraph text */
+    margin: 0 auto; /* Center the paragraph block itself */
+}
+
+/* Scrollable Pre */
+.scrollable-pre {
+    margin: 2rem auto;
+    max-width: 90%;
+    overflow-x: auto;
+    background: #aa6e6e;
+    padding: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+    text-align: center;
+}
+
+.scrollable-pre {
+    text-align: center; /* Center-align text */
+}
+
+/* Footer */
+footer {
+    position: relative;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ff5900;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: .75rem;
+}
+
+/* Global Box-Sizing */
+* {
+    box-sizing: border-box;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .scrollable-pre {
+        font-size: 14px;
+    }
+
+    blockquote {
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
