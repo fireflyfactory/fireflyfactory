@@ -7,39 +7,357 @@ title {
 body {
     background-color: #aa6e6e;
     margin: 0;
-    padding: 0;
+    padding: 100px;
     font-family: 'Times New Roman', Times, serif;
 }
 
-/* Header styles */
+/* Header container to prevent layout shift */
+body {
+    padding-top: 40vh; /* Same height as header when expanded */
+}
 
+/* Prevents content shift */
+body {
+    padding-top: 40vh; /* Keeps space for expanded header */
+    margin: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling issues */
+}
+
+body::before {
+    content: "";
+    display: block;
+    height: 50vh; /* Matches expanded header height */
+    width: 100%;
+}
+
+/* ✅ Main header styling */
 header {
-    position: relative;
-    height: 40vh;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full width */
+    z-index: 1000;
+    height: 50vh; /* ✅ Adjusted height to fit text */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    border: 10px solid #bb461b;
+    justify-content: space-evenly; /* ✅ Distributes title & nav evenly */
+    border: 9px solid #bb461b;
     border-radius: 25px;
-    padding: 5rem;
-    overflow: hidden;
+    padding: 2rem 1rem; /* ✅ Balanced padding */
+    box-sizing: border-box;
+    text-align: center;
+    transition: height 0.9s ease-in-out, padding 0.9s ease-in-out;
+    will-change: height, padding;
 }
 
+/* ✅ Background blur effect */
 header::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('persian-rug-wallpaper.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: blur(5px);
+    background-size: cover; /* ✅ Ensures it fills the entire area */
+    background-position: center; /* ✅ Centers the image */
+    background-repeat: no-repeat; /* ✅ Prevents tiling */
+    filter: blur(4px);
     z-index: -1;
-    border-radius: 25px;
+}
+
+
+/* ✅ Collapsed Header */
+header.collapsed {
+    position: fixed;
+    height: 15vh; /* ✅ Slightly increased to fit everything */
+    padding: 1rem;
+    opacity: 0.95;
+}
+
+/* ✅ Prevents layout shifting */
+header.collapsed + .content {
+    padding-top: 15vh;
+}
+
+/* ✅ Title Styling */
+header h1 {
+    font-size: 8rem !important ;
+    text-align: center;
+    margin: 0;
+    line-height: 1;
+    transition: font-size 0.4s ease-in-out;
+    word-wrap: break-word;
+}
+
+/* ✅ Title shrinks when collapsed */
+header.collapsed h1 {
+    font-size: 2rem !important;
+}
+
+/* ✅ Navigation inside header */
+header nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* ✅ Allows wrapping on smaller screens */
+    transition: margin-top 0.4s ease-in-out;
+}
+
+/* ✅ Adjusts nav when collapsed */
+header.collapsed nav {
+    margin-top: 0;
+}
+
+/* ✅ Nav list styling */
+header nav ul {
+    display: flex;
+    flex-wrap: wrap; /* ✅ Prevents overflow */
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ✅ Nav links */
+header nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem; /* ✅ Adjusted for fit */
+    font-weight: bold;
+    color: #daa36fb3;
+    padding: 0.4rem 0.6rem;
+    background-color: rgba(77, 32, 32, 0.48);
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, font-size 0.4s ease-in-out;
+}
+
+/* ✅ Nav links shrink when collapsed */
+header.collapsed nav ul li a {
+    font-size: 1rem;
+    padding: 0.3rem 0.5rem;
+}
+
+/* ✅ Hover effect */
+header nav ul li a:hover {
+    color: #e37e03;
+    background-color: #ffdfba;
+}
+
+/* ✅ Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    header {
+        height: 30vh;
+        padding: 1rem;
+    }
+
+    header.collapsed {
+        height: 10vh;
+        padding: 0.5rem;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    header.collapsed h1 {
+        font-size: 1.8rem;
+    }
+
+    header nav ul {
+        gap: 5px;
+    }
+
+    header nav ul li a {
+        font-size: 1rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    header.collapsed nav ul li a {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 25vh;
+        padding: 0.8rem;
+    }
+
+    header.collapsed {
+        height: 8vh;
+        padding: 0.3rem;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header.collapsed h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav ul {
+        flex-direction: column; /* ✅ Stack links on very small screens */
+        gap: 3px;
+    }
+
+    header nav ul li a {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.5rem;
+    }
+
+    header.collapsed nav ul li a {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.4rem;
+    }
+}
+
+/* ✅ Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    header {
+        height: 25vh; /* ✅ Smaller height for smaller screens */
+        padding: 1rem;
+    }
+
+    header.collapsed {
+        height: 8vh;
+        padding: 0.4rem;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header.collapsed h1 {
+        font-size: 1.4rem;
+    }
+
+    header nav ul {
+        gap: 5px;
+    }
+
+    header nav ul li a {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    header.collapsed nav ul li a {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 20vh; /* ✅ Adjust for very small screens */
+        padding: 0.8rem;
+    }
+
+    header.collapsed {
+        height: 7vh;
+        padding: 0.3rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header.collapsed h1 {
+        font-size: 1.2rem;
+    }
+
+    header nav ul {
+        flex-direction: column; /* ✅ Stack links on very small screens */
+        gap: 3px;
+    }
+
+    header nav ul li a {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.5rem;
+    }
+
+    header.collapsed nav ul li a {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.4rem;
+    }
+}
+
+
+/* ✅ Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    header {
+        height: 35vh;
+        padding: 1rem;
+    }
+
+    header.collapsed {
+        height: 10vh;
+        padding: 0.4rem;
+    }
+
+    header h1 {
+        font-size: 2.8rem;
+    }
+
+    header.collapsed h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav ul {
+        gap: 5px;
+    }
+
+    header nav ul li a {
+        font-size: 1rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    header.collapsed nav ul li a {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.5rem;
+    }
+}
+
+/* Collapsing animation */
+@keyframes collapseAnimation {
+    from {
+        padding: 5rem;
+        background-color: #ffffff;
+        transform: translateY(0);
+    }
+    to {
+        padding: 1rem 2rem;
+        background-color: #f8f9fa;
+        transform: translateY(-10px);
+    }
+}
+
+/* Expanding animation */
+@keyframes expandAnimation {
+    from {
+        padding: 1rem 2rem;
+        background-color: #f8f9fa;
+        transform: translateY(-10px);
+    }
+    to {
+        padding: 5rem;
+        background-color: #ffffff;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Trigger animation with classes */
+header.animate-collapse {
+    animation: collapseAnimation 0.5s ease forwards;
+}
+
+header.animate-expand {
+    animation: expandAnimation 0.5s ease forwards;
 }
 
 header h1 {
@@ -51,6 +369,7 @@ header h1 {
     text-align: center;
     margin: 0;
     z-index: 1;
+    
 }
 
 .welcome-message {
@@ -99,13 +418,25 @@ header nav ul li a:hover {
 }
 
 .text-box {
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.1), 0 10px 16px rgba(0, 0, 0, 0.06);
+}
+
+.text-box img:hover {
+    transform: scale(1.05);
+    transition: transform 1s ease;
+}
+
+header h1 {
+    text-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.text-box {
     border: 5px solid #bb461b;
     padding: 25px;
     margin: 20px;
     border-radius: 25px;
     background-color: #ec904eca;
     text-align: center;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .text-box:hover {
@@ -117,13 +448,16 @@ header nav ul li a:hover {
     text-decoration: none;
     font-size: x-large;
 }
+
 /* Image scaling styles */
 
 .text-box img, .content-container img {
-    width: 100%;
-    height: auto;
+    width: 90%;
+    height: 90%;
     max-width: 100%;
-    border-radius: 15px;
+    border-radius: 50px;
+    filter: opacity(80%);
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
 }
 
 /* Responsive content layout */
@@ -200,21 +534,34 @@ blockquote {
 
 footer {
     position: relative;
-    margin-top: 20px;
+    clear: both;
+    width: 100vw; /* ✅ Forces it to span the full viewport */
+    min-height: 100px; /* ✅ Ensures it has height */
+    margin: 0; /* ✅ Removes any margin that could shrink width */
     padding: 10px;
     background-color: #ff5900;
-    text-align: left;
+    text-align: center;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bolder;
-    font-size: .75rem;
+    font-size: 0.75rem;
+    box-sizing: border-box; /* ✅ Ensures padding doesn’t shrink width */
 }
 
+/* ✅ Prevent spacing issues */
 footer p {
-
+    margin: 5px 0;
     font-weight: bold;
-    font-size: .75rem; 
-
+    font-size: 0.75rem;
 }
+
+/* ✅ Make sure body & html allow full width */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* ✅ Prevents any unexpected scrollbars */
+}
+
 
 a {
     text-decoration: none;
@@ -224,6 +571,14 @@ h2 {
 
     text-align: center;
 }
+
+.contact {
+    min-height: 100px; /* Ensure it has space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* Media Queries for Responsiveness */
 
