@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-<!-- ^Doctype and Lang^ -->
-
 <head>
-    <meta charset="UTF-8"> <!-- Characterset -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport -->
-    <link rel="stylesheet" href="firststylesheet.css"> <!-- Reference to Stylesheet -->
-    <title>Firefly Factory</title> <!-- Title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firefly Factory</title>
+    
+    <!-- External Stylesheets -->
+    <link href="firststylesheet.css" rel="stylesheet"> <!-- Custom Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- AOS Stylesheet -->
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TYC5Y81YNJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TYC5Y81YNJ');
+    </script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TYC5Y81YNJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-TYC5Y81YNJ');
-</script>
-<body> 
 
+<body>
     <div class="content"> 
-        <header>
+      <header id="header">
+
             <h1>FIREFLY FACTORY</h1>
             <nav>
                 <ul>
@@ -32,54 +34,61 @@
                 </ul>
             </nav>
         </header>
+
+        <h2 class="welcome-message" data-aos="fade-in" data-aos-duration="1000" data-aos-easing="ease-in-out">
+            Welcome to Firefly Factory. Enjoy your stay.
+        </h2>
         
 
- 
-        <h2 class="welcome-message">Welcome to Firefly Factory. Enjoy your stay.</h2>
+        <blockquote data-aos="fade-down" data-aos-duration="1000">
+            <i>"You don't have to be responsible for the world that you're living in."</i> 
+            - J. Von Neumann to Richard Feynman
+        </blockquote>
 
+        <div class="flex-container" data-aos="fade-down" data-aos-duration="600" data-aos-easing="ease-in-out" >   
+            <a href="about.html" class="text-box-link">
+                <div class="text-box about">
+                    <h3>about</h3>
+                    <img src="IMG_2584 copy.JPG" alt="Oranges/About">
+                    <p>Learn more about Firefly Factory here.</p>
+                </div>
+            </a>
+        </div>
 
-<p> <blockquote> | <i> "You don't have to be responsible for the world that you're living in." </i> 
-    - J. Von Neumann to Richard Feynman outside of Los Alamos, allegedly, in Benjamin Labatut's <i> The Maniac. </i> | </blockquote> </p>
-   
-<div class="flex-container">   
-        <a href="about.html" class="text-box-link">
-            <div class="text-box about">
-                <h3> about </h3>
-                <img src="IMG_2584 copy.JPG" alt="Oranges/About">
-                <p>Learn more about Firefly Factory here.</p>
-            </div>
-        </a>
-</div>
-    
-<div class="flex-container">
-        <a href="collectedworks.html" class="text-box-link">
-            <div class="text-box collectedworks">
-                <h3> collected works </h3>
-                <img src="IMG_2818 copy.JPG" alt="Jellyfish/Works">
-                <p>Uncontained, occasionally unintentional lyrics from various facets of my life.</p>
-            </div>
-        </a>
-    </div>
-    
-    
-    <div class="flex-container">
-        <a href="contact.html" class="text-box-link">
-            <div class ="text-box contact">
-                <h3> contact </h3>
-            </div>
-        </a>
-    </div>         
-</div>   
+        <div class="flex-container" data-aos="fade-down" data-aos-duration="600" data-aos-easing="ease-in-out" >
+            <a href="collectedworks.html" class="text-box-link">
+                <div class="text-box collectedworks">
+                    <h3>collected works</h3>
+                    <img src="IMG_2818 copy.JPG" alt="Jellyfish/Works">
+                    <p>Uncontained, occasionally unintentional lyrics from various facets of my life.</p>
+                </div>
+            </a>
+        </div>
 
-<footer> 
-    <p> 
-        /!\THIS WEBSITE IS UNDER CONSTRUCTION! /!\ WHAT IS SEEN HERE DOES NOT REPRESENT THE FINAL PRODUCTS NOR THE TERMINAL EFFORT OF THIS WEBSITE'S CREATOR! /!\ 
-    </p>
+        <div class="flex-container" data-aos="fade-down" data-aos-duration="600" data-aos-easing="ease-in-out">
+            <a href="contact.html" class="text-box-link">
+                <div class="text-box contact">
+                    <h3>contact</h3>
+                </div>
+            </a>
+        </div>         
+
+    <footer data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1000">
+        <p>
+            /!\ THIS WEBSITE IS UNDER CONSTRUCTION! /!\ WHAT IS SEEN HERE DOES NOT REPRESENT THE FINAL PRODUCTS NOR THE TERMINAL EFFORT OF THIS WEBSITE'S CREATOR! /!\
+        </p>
+        <p>
+            © 2024 Firefly Factory. All rights reserved to SJBC PRODUCTIONS. All content - text, image, and code - is my own (besides the header and the book covers).
+        </p>
+    </footer>
     
-    <p> 
-        © 2024 Firefly Factory. All rights reserved to SJBC PRODUCTIONS. All content - text, image, and code - is my own (besides the header and the book covers).
-    </p>
-</footer>
+
+    <!-- External Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
