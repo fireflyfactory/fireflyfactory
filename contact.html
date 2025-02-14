@@ -1,57 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- ^Doctype and Lang^ -->
-
 <head>
-    <meta charset="UTF-8"> <!--Characterset-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Viewport-->
-    <link rel="stylesheet" href="firststylesheet.css"> <!--Ref to Stylesheet-->
-    <title>Firefly Factory</title> <!--Title-->
+    <meta charset="UTF-8"> <!-- Characterset -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport -->
+    <title>Firefly Factory - Contact</title> <!-- Title -->
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="firststylesheet.css"> <!-- Ref to Stylesheet -->
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TYC5Y81YNJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TYC5Y81YNJ');
+    </script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TYC5Y81YNJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TYC5Y81YNJ');
-</script>
-
-<!-- ^^^ All head info  ^^^ /// VVV Random VVV -->
-<!-- Link format: <a href="https://example.com">Click here to visit Example.com!</a>-->
-<!-- Image format: <img src="path_to_image.jpg" alt="Description of image" width="500">-->
 
 <body> 
-    <header>
+    <!-- ✅ Ensuring header is consistent across all pages -->
+    <header id="header">
         <h1>FIREFLY FACTORY</h1>
         <nav>
             <ul>
-                <li><a href = "index.html"> Home </a></li>
-                <li><a href = "about.html" > About </a></li>
-                <li><a href = "collectedworks.html"> Collected Works</a></li>
-                <li><a href = "contact.html" > Contact </a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="collectedworks.html">Collected Works</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-<h2>CONTACT</h2>
-<p> This blog is an SJBC Production. My personal email is sj.casaberriz@gmail.com. </p>
 
-<p> <pre>  
-                                                                         ________________________________________ 
-                                                                        / FF Version 12.24: Signature in footer, \
-                                                                        | poetry viewport bug patched, analytics |
-                                                                        | metatags, and some journal entries.    |
-                                                                        \ Happy holidays!                        /
-                                                                         ----------------------------------------  
-                                                                            \
-                                                                             \
-                                                                                  .--.
-                                                                                 |o_o |
-                                                                                 |:_/ |
-                                                                                //   \ \
-                                                                               (|     | )
-                                                                              /'\_   _/`\
-                                                                              \___)=(___/
+    <main>
+        <h2>CONTACT</h2>
+        <p>
+            This blog is an SJBC Production. My personal email is  sj.casaberriz@gmail.com
+            Please do not hesitate to reach out.
+        </p>
+    </main>
+    <pre>  
+        ________________________________________ 
+       / FF Version 2.25: Massive viewport over-\
+       | haul to accommodate mediocre animations.|
+       | Some journal entries. /
+        ------------------------
+           \
+            \
+                 .--.
+                |o_o |
+                |:_/ |
+               //   \ \
+              (|     | )
+             /'\_   _/`\
+             \___)=(___/
+               </pre>
+    <footer> 
+        <p>/!\ THIS WEBSITE IS UNDER CONSTRUCTION! /!\</p>
+        <p>© 2024 Firefly Factory. All rights reserved to SJBC PRODUCTIONS.</p>
+    </footer>
 
-    </pre></p>
+    <!-- ✅ Script should always be at the bottom -->
+    <script src="script.js"></script>
+</body>
+</html>
